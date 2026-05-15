@@ -1,0 +1,17 @@
+# natvs-engine Build Harness (weBNF)
+
+[build "natvs-engine"] {
+    type = "go";
+    source_root = "cmd/natvs-engine";
+    binary_name = "natvs-engine.exe";
+    
+    # Destination in the 9xxxx authority range
+    destination = "96000-int-artifact-cognition-intelligence";
+
+    
+    constraints = [
+        "go >= 1.26.3",
+        "os = windows",
+        "arch = amd64"
+    ];
+}
