@@ -74,9 +74,9 @@ func main() {
 	finalResult := results[len(results)-1]
 	if finalResult.Stage == natvs.Synthesis && finalResult.Output != "" {
 	        // Use .webnf extension for the ledger
-	        ledgerPath := filepath.Join(gitRoot, "000ALL", "sCognition", "80600-Agent-Narrative-Ledger", task.ID+".webnf")
-	        err := os.WriteFile(ledgerPath, []byte(finalResult.Output), 0644)
+	        ledgerPath := filepath.Join(gitRoot, "000all", "scognition", "80600-agent-narrative-ledger", task.ID+".webnf")
 
+	        err := os.WriteFile(ledgerPath, []byte(finalResult.Output), 0644)
 		if err == nil {
 			slog.Info("Transformation Summary committed to Narrative Ledger", "ledger_path", ledgerPath)
 		} else {
